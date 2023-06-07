@@ -57,8 +57,8 @@ async def insert_to_db(person_list):
                                 vehicles = json_data["vehicles"]
                     ) 
                 ]
-        session.add_all(swars_list)
-        await session.commit()
+                session.add_all(swars_list)
+                await session.commit()
 
 async def main():
     async with engine.begin() as con:
